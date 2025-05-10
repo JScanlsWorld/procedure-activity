@@ -24,8 +24,8 @@ output:
 	
 	mov ecx, bffr         ;change ecx to a pointer to bffr
 	mov edx, 1
-    mov ebx, 1
-    mov eax, 4
+	mov ebx, 1
+    	mov eax, 4
 	int 0x80              ;print newline
 
 	mov ecx, temp         ;revert ecx to pointer for "temp"
