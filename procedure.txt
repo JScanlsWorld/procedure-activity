@@ -1,0 +1,39 @@
+section .text
+
+	global _start
+
+_start:
+	mov al, 65            ;load al with 65
+	mov [temp], al        ;load temp with 65
+	mov ecx, temp         ;make ecx a pointer to temp
+
+AtoZ:
+	call output           ;call output procedure
+	inc byte [temp]       ;temp = temp + 1
+	cmp byte [temp], 91   ;if temp < 91...
+	jl AtoZ 	          ;loop
+
+	mov eax, 1
+	int 0x80
+
+output:
+	mov edx, 1
+	mov ebx, 1
+	mov eax, 4
+	int 0x80              ;print current letter
+	
+	mov ecx, bffr         ;change ecx to a pointer to bffr
+	mov edx, 1
+    mov ebx, 1
+    mov eax, 4
+	int 0x80              ;print newline
+
+	mov ecx, temp         ;revert ecx to pointer for "temp"
+
+	ret
+
+section .bss
+	temp resb 1
+
+section .data
+	bffr	db	   0xa
