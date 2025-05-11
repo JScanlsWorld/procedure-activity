@@ -5,3 +5,4 @@ The way I decided to approach this problem was by first recognizing what must be
 Challenges
 
 The only two challenges I had with creating this program was incorrectly allocating space (using eax instead of al for single byte operations) and getting the code to print in the terminal. I fixed the first issue by simply switching some instances of eax to al, and I addressed the second issue by still compiling using nasm, but by executing the file as ./procedure.asm instead of ./procedure .
+
