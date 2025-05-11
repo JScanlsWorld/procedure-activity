@@ -1,8 +1,11 @@
 Problem
 
-The way I decided to approach this problem was by first recognizing what must be present in my program; that being an incremental counter, and newlines after every letter is printed to the terminal. So, I made a procedure that simply prints the letter and then a newline after by setting the first variable, "temp," to decimal ASCII representation of each letter of the alphabet per iteration, and "bffr" (buffer) to "0xa." After "temp" reaches 91, it leaves the loop and exits.
+The way I decided to approach this problem was by first recognizing what must be present in my program; that being an incremental counter, and newlines after every letter is printed to the terminal.
+So, I made a procedure that simply prints the letter and then a newline after by setting the first variable, "temp," to decimal ASCII representation of each letter of the alphabet per iteration, and 
+"bffr" (buffer) to "0xa." After "temp" reaches 91, it leaves the loop and exits.
 
 Challenges
 
-The only two challenges I had with creating this program was incorrectly allocating space (using eax instead of al for single byte operations) and getting the code to print in the terminal. I fixed the first issue by simply switching some instances of eax to al, and I addressed the second issue by still compiling using nasm, but by executing the file as ./procedure.asm instead of ./procedure .
+The only two challenges I had with creating this program was incorrectly allocating space (using eax instead of al for single byte operations) and getting the code to print in the terminal. 
+I fixed the first issue by simply switching some instances of eax to al, and I addressed the second issue by still compiling using nasm, but by executing the file as ./procedure.asm instead of ./procedure .
 
